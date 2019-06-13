@@ -101,7 +101,7 @@ public class GetAccessToken {
                 System.out.print("Enter the PIN(if available) and hit enter after you granted access.[PIN]:");
                 String pin = br.readLine();
                 try {
-                    if (pin.length() > 0) {
+                    if (pin != null && pin.length() > 0) {
                         accessToken = twitter.getOAuthAccessToken(requestToken, pin);
                     } else {
                         accessToken = twitter.getOAuthAccessToken(requestToken);
