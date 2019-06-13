@@ -168,6 +168,9 @@ public final class HttpParameter implements Comparable<HttpParameter>, java.io.S
     }
 
     public static boolean containsJson(HttpParameter[] params) {
+        if(params == null){
+            return false;
+        }
         return params.length == 1 && params[0].isJson();
     }
 
